@@ -44,7 +44,7 @@ public class ItemGenerator : MonoBehaviour
                     else if (7 <= item && item <= 9)
                     {
                         GameObject car = Instantiate(carPrefab);
-                        car.transform.position = new Vector3(posRange * j, car.transform.position.y, i + OffsetZ);
+                        car.transform.position = new Vector3(posRange * j, car.transform.position.y, i + OffsetZ);  
                     }
                 }
 
