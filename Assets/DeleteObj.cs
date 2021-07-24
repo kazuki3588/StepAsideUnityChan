@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class DeleteObj : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject cam;
     void Start()
     {
-        
+        cam = GameObject.Find("Main Camera");
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+  
+        if(cam.transform.position.z > transform.position.z)
+        {
+            Destroy(gameObject);
+        }
     }
-    private void OnBecameInvisible()
-    {
-        Debug.Log("消えたよ");
-        Destroy(this.gameObject);
-    }
+
 }
+ 
